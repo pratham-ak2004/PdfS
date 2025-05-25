@@ -3,10 +3,10 @@ from transformers import pipeline
 class Models:
     def __init__(self):
         self.summarizer = pipeline(
-            "summarization", model="pszemraj/led-base-book-summary", device="cuda"
+            "summarization", model="pszemraj/led-base-book-summary"
         )  # https://huggingface.co/pszemraj/led-base-book-summary
         self.qna = pipeline(
-            "question-answering", model="deepset/roberta-base-squad2", device="cuda"
+            "question-answering", model="deepset/roberta-base-squad2"
         )  # https://huggingface.co/deepset/roberta-base-squad2
         self.qna_input = {
             "question": "",
